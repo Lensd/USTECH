@@ -35,12 +35,14 @@
                         разработка и программирование электроники,веб-разрабокта, android - разработка,а также
                         специализируется в области smm и дизайна платформ</p>
                         <div class="columns">
-                    <button class="button  has-text-white is-rounded but column">Получить консультацию</button>
-                    <form action=""></form>
-                    <button class="button column has-text-white is-rounded but" style="margin:19px auto auto -400px;">Наша команда</button>
+
+                  <a href="#application" onClick="toggleBurger()" class="button has-text-white is-rounded but column py-5" style="display: block;"> Получить консультацию </a>
+                  
+                    <button class="button column has-text-white is-rounded but" style="margin:19px auto auto -400px;"  onclick="document.location='https://lensd.github.io/USTECH_Command/'" target="_blank">Наша команда</button>
+                   
                     <form action="https://lensd.github.io/USTECH_pages/" target="_blank">
-                    <button class="button column has-text-white is-rounded but" style="margin:19px auto auto;">  Наши проекты</button>
-       
+                    <button class="button column has-text-white is-rounded but mx-4" style="margin:19px auto auto;">  Наши проекты</button>
+                    </form>
                 </div>
                 </div>
                 <div class="column">
@@ -110,23 +112,18 @@
             </div>
             <div class="columns">
                 <div class="column">
-                    <div class="title">7+</div>
-                    <div class="subtitle" style="font-size: 18px;">Специалистов</div>
+                    <div class="title has-text-centered">7+</div>
+                    <div class="subtitle has-text-centered" style="font-size: 18px;">Специалистов</div>
                     <hr>
                 </div>
                 <div class="column">
-                    <div class="title">2 года</div>
-                    <div class="subtitle" style="font-size: 18px;">Опыта в своем деле</div>
+                    <div class="title has-text-centered">2 года</div>
+                    <div class="subtitle has-text-centered" style="font-size: 18px;">Опыта в своем деле</div>
                     <hr>
                 </div>
                 <div class="column">
-                    <div class="title">10+</div>
-                    <div class="subtitle" style="font-size: 18px;">Услуги Проектов</div>
-                    <hr>
-                </div>
-                <div class="column">
-                    <div class="title">1440h</div>
-                    <div class="subtitle" style="font-size:18px;">Подготовка к проекту</div>
+                    <div class="title has-text-centered">10+</div>
+                    <div class="subtitle has-text-centered" style="font-size: 18px;">Проектов</div>
                     <hr>
                 </div>
             </div>
@@ -273,7 +270,7 @@
     </section>
     <!-- impact шрифт -->
 
-    <section class="section">
+    <section class="section " id = "application">
         <div class="box has-background-white is-rounded registre vox">
             <form class="form" method="post">
                 <div class="has-text-centered">
@@ -358,7 +355,7 @@
                     </div>
                 </div>
 
-                <div class="column ">
+                <div class="column">
                     <div class="title has-text-white my-6">
                         Свяжитесь с нами
                     </div>
@@ -391,6 +388,21 @@
             </div>
         </div>
     </section>
+
+    <script>
+        let toggleBurger = () => {
+            document.querySelector('.navbar-menu').classList.toggle('is-active')
+            document.querySelector('.navbar-burger').classList.toggle('is-active')
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href'))
+                    .scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
 
 </body>
 
